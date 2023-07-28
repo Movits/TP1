@@ -9,6 +9,7 @@ body{
     height: fit-content;
     width: 100%;
     padding: 10px;
+    padding-bottom: 2vh;
     color: black;
 }
 
@@ -27,8 +28,11 @@ h1{
     margin: 0;
 }
 
-#contenedor-productos-y-info{
-    place-items: center;
+#contenedor-info{
+    place-items: left;
+    place-content: center;
     display: grid;
-    background-color: grey;
+    background-color: rgb(92, 92, 92);
+    padding: 2vh;
+    color: whitesmoke;
 }
