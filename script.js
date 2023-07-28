@@ -43,7 +43,15 @@ function info(){
 function prod() {
     const ProductosMostrar = cantProdMostrar.value;
     const divContenedorProd = document.querySelector("#contenedor-productos");
+    const opciones = [1,15,25,50];
     for (let i = 0; i < ProductosMostrar; i++) {
+        let opcSelectColores = ``;
+        for (let i = 0; i < opciones.length; i++) {
+            if (opciones[i] <= cantPermitida.value) {
+                opcSelectColores += `<option value="${opciones[i]}">${opciones[i]}</option>`;
+            }
+            
+        }
         divContenedorProd.innerHTML += `
             <div class="div-colores">
                 <div class="productos">
@@ -56,8 +64,8 @@ function prod() {
                         <option value="Credito">Credito</option>
                     </select>
                     <p>Seleccione cantidades</p>
-                    <select name="" id="${cantPermitida.innerHTML}">
-                        
+                    <select name="" id="cantidades">
+                        ${opcSelectColores}
                     </select>
                 </div>
             </div>
