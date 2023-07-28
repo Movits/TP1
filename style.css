@@ -9,3 +9,14 @@
 #contenedor-productos{
     border: 2px solid black;
 }
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+#productos{
+    border: 2px solid black;
+    width: fit-content;
+    padding: 1vh;
+}
