@@ -64,20 +64,3 @@ function prod() {
         `;
     }
 }
-
-function colores() {
-    const divColores = document.querySelector("#div-colores");
-    switch (prodColores.value) {
-        case "Rojo-Amarillo":
-            divColores.style.backgroundcolor = black
-            break;
-        case "Verde-Violeta":
-
-            break;
-        case "Azul-Gris":
-
-            break;
-        default:
-            break;
-    }
-}
