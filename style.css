@@ -7,8 +7,6 @@ body{
     place-items: center;
     display: grid;
     height: fit-content;
-    width: 100%;
-    padding: 10px;
     padding-bottom: 2vh;
     color: black;
 }
@@ -17,6 +15,7 @@ body{
     display: grid;
     place-items: left;
     color: black;
+    width: 45vh;
 }
 
 .selc-prod{
@@ -29,10 +28,12 @@ h1{
 }
 
 #contenedor-info{
-    place-items: left;
-    place-content: center;
-    display: grid;
-    background-color: rgb(92, 92, 92);
-    padding: 2vh;
     color: whitesmoke;
+    width: 45vh;
+}
+
+#contenedor-productos-y-info{
+    display: grid;
+    place-content: center;
+    background-color: rgb(92, 92, 92);
 }
