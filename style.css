@@ -3,13 +3,13 @@ body{
 }
 
 #contenedor-principal{
-    padding-left: 2vh;
+    padding-left: 1vh;
     padding-bottom: 2vh;
 }
 
 #contenedor-info{
-    padding-left: 2vh;
     background-color: darkgrey;
+    padding: 1vh;
 }
 
 #contenedor-productos{
