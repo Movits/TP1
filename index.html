@@ -9,33 +9,43 @@
 <body>
     
     <div id="contenedor-principal">
+
         <h1>Pizzaria Movits</h1>
+        <h2>La felicidad está a solo unas porciónes de distancia</h2>
+        
         <div id="contenedor-gerar-prod">
-            <p>Cantidad de productos a mostrar:</p>
-            <select name="" id="cant-prod-mostrar">
+            <div class="selc-prod">
+                <p>Cantidad de productos a mostrar:</p>
+                <select name="" id="cant-prod-mostrar">
                 <option value="1">1</option>
                 <option value="3">3</option>
                 <option value="7">7</option>
                 <option value="10">10</option>
-            </select><br>
-
-            <p>Cantidad permitida por cada producto:</p>
-            <select name="" id="cant-perm">
+                </select>
+            </div>
+            
+            <div class="selc-prod">
+                <p>Cantidad permitida por cada producto:</p>
+                <select name="" id="cant-perm">
                 <option value="1">1</option>
                 <option value="15">15</option>
                 <option value="25">25</option>
                 <option value="50">50</option>
-            </select><br>
-
-            <p>Colores:</p>
-            <select name="" id="colores-prod">
+                </select>
+            </div>
+            
+            <div class="selc-prod">
+                <p>Colores:</p>
+                <select name="" id="colores-prod">
                 <option value="Ninguno">Ninguno</option>
                 <option value="Rojo-Amarillo">Rojo-Amarillo</option>
                 <option value="Varde-Violeta">Verde-Violeta</option>
                 <option value="Azul-Gris">Azul-Gris</option>
-            </select><br><br>
+                </select>
+            </div>
 
             <button onclick="generar()">Generar</button>
+
         </div>
     </div>
     

@@ -1,1 +1,34 @@
-/* Hola ;) */
+body{
+    background-color: lightgrey;
+    margin: 0;
+}
+
+#contenedor-principal{
+    place-items: center;
+    display: grid;
+    height: fit-content;
+    width: 100%;
+    padding: 10px;
+    color: black;
+}
+
+#contenedor-gerar-prod{
+    display: grid;
+    place-items: left;
+    color: black;
+}
+
+.selc-prod{
+    display: flex;
+    place-items: center;
+}
+
+h1{
+    margin: 0;
+}
+
+#contenedor-productos-y-info{
+    place-items: center;
+    display: grid;
+    background-color: grey;
+}
