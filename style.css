@@ -1,13 +1,18 @@
 #contenedor-principal{
-    border: 2px solid black;
+    border: 2px solid rgb(255, 0, 0);
+    padding-left: 2vh;
+    padding-bottom: 2vh;
 }
 
 #contenedor-info{
-    border: 2px solid black;
+    border: 2px solid rgb(51, 255, 0);
+    padding-left: 2vh;
 }
 
 #contenedor-productos{
-    border: 2px solid black;
+    border: 2px solid rgb(4, 0, 255);
+    display: flex;
+    place-content: center;
 }
 
 img{
@@ -15,8 +20,11 @@ img{
     height: 100px;
 }
 
-#productos{
+.productos{
+    display: grid;
     border: 2px solid black;
-    width: fit-content;
-    padding: 1vh;
+    width: 260px;
+    place-content: center;
+    place-items: center;
+    padding: 2vh;
 }

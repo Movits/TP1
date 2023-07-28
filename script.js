@@ -3,8 +3,6 @@ const cantPermitida = document.querySelector("#cant-perm");
 const prodColores = document.querySelector("#colores-prod");
 const divContenedorProdYInfo = document.querySelector("#contenedor-productos-y-info");
 
-const ProductosMostrar = [cantProdMostrar.value];
-
 const IMG_1 = "https://static.vecteezy.com/system/resources/previews/009/900/525/original/pizza-slice-isolated-illustration-colored-sketch-drawn-illustration-of-a-hot-slice-of-pepperoni-pizza-with-melting-cheese-food-cafe-pizzeria-logo-signboard-banner-menu-design-element-vector.jpg";
 
 const Imgs = [];
@@ -36,28 +34,24 @@ function info(){
 }
 
 function prod() {
+    const ProductosMostrar = cantProdMostrar.value;
     const divContenedorProd = document.querySelector("#contenedor-productos");
-    divContenedorProd.innerHTML = `
-        <div id="productos">
-                
-        </div>
-    `;
-
-    const divProductos = document.querySelector("#productos");
-    for (let i = 0; i < ProductosMostrar.length; i++) {
-        divProductos.innerHTML += `
-            <p>Porción de ${Productos[i]}</p>
-            <img src="${IMG_1}" alt="img">
-            <p>Seleccione pago</p>
-            <select name="" id="formas-de-pago">
-                <option value="Efectivo">Efectivo</option>
-                <option value="Debito">Debito</option>
-                <option value="Credito">Credito</option>
-            </select>
-            <p>Seleccione cantidades</p>
-            <select name="" id="${cantPermitida.innerHTML}">
-                
-            </select>
-        `; 
+    for (let i = 0; i < ProductosMostrar; i++) {
+        divContenedorProd.innerHTML += `
+            <div class="productos">
+                <p>Porción de ${Productos[i]}</p>
+                <img src="${IMG_1}" alt="img">
+                <p>Seleccione pago</p>
+                <select name="" id="formas-de-pago">
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Debito">Debito</option>
+                    <option value="Credito">Credito</option>
+                </select>
+                <p>Seleccione cantidades</p>
+                <select name="" id="${cantPermitida.innerHTML}">
+                    
+                </select>
+            </div>
+        `;
     }
 }
