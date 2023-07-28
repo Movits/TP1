@@ -1,18 +1,21 @@
+body{
+    background-color: lightgrey;
+}
+
 #contenedor-principal{
-    border: 2px solid rgb(255, 0, 0);
     padding-left: 2vh;
     padding-bottom: 2vh;
 }
 
 #contenedor-info{
-    border: 2px solid rgb(51, 255, 0);
     padding-left: 2vh;
+    background-color: darkgrey;
 }
 
 #contenedor-productos{
-    border: 2px solid rgb(4, 0, 255);
     display: flex;
     place-content: center;
+    background-color: lightgreen;
 }
 
 img{
@@ -21,10 +24,12 @@ img{
 }
 
 .productos{
+    border: 2px solid whitesmoke;
     display: grid;
-    border: 2px solid black;
-    width: 260px;
+    width: 200px;
     place-content: center;
     place-items: center;
     padding: 2vh;
+    margin: 1vh;
+    background-color: lightgrey;
 }
