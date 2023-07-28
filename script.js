@@ -18,21 +18,27 @@ function generar() {
 
     const divContenedorInfo = document.querySelector("#contenedor-info");
     divContenedorInfo.innerHTML = `
-        <div id="css-info">
             <p>La cantidad de productos a mostrar es: ${cantProdMostrar.value}</p>
             <p>La cantidad de productos permitidos por compra es: ${cantPermitida.value}</p>
-            <p>Los colores seleccionados a usar son: ${prodColores.value}</p>
-        </div>    
+            <p>Los colores seleccionados a usar son: ${prodColores.value}</p>    
         
     `;
 
     const divContenedorProd = document.querySelector("#contenedor-productos");
     divContenedorProd.innerHTML += `
         <div id="productos">
-
-        </div>
-        <div id="productos">
-
+            <p>Producto 1</p>
+            <img src="" alt="img">
+            <p>Seleccione pago</p>
+            <select name="" id="formas-de-pago">
+                <option value="Efectivo">Efectivo</option>
+                <option value="Debito">Debito</option>
+                <option value="Credito">Credito</option>
+            </select>
+            <p>Seleccione cantidades</p>
+            <select name="" id="${cantPermitida.innerHTML}">
+                
+            </select>
         </div>
     `;
 }
