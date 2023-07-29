@@ -14,6 +14,12 @@ const Productos = [
     "Napolitana"
 ];
 
+const TipoProd = [
+    "Porcion de ",
+    "Porcion de ",
+    "Porcion de "
+];
+
 
 function generar() {
     divContenedorProdYInfo.innerHTML = `
@@ -55,7 +61,7 @@ function prod() {
         divContenedorProd.innerHTML += `
             <div class="div-colores">
                 <div class="productos">
-                    <p>Porción de ${Productos[i]}</p>
+                    <p>${TipoProd[i]} ${Productos[i]}</p>
                     <img src="${Imgs[i]}" alt="img">
                     <p>Seleccione pago</p>
                     <select name="" id="formas-de-pago">
