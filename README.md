@@ -2,8 +2,6 @@
 
 ## Dev - Roberto França Alagemovits
 
-#
-
 ## Acerca del Proyecto
 
 "Pizzaria Movits" es una aplicación web dinámica para una pizzería. La aplicación permite a los usuarios personalizar la visualización de los productos disponibles según diversos parámetros.
