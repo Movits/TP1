@@ -118,21 +118,19 @@ function prod() {
             
         }
         divContenedorProd.innerHTML += `
-            <div class="div-colores">
-                <div class="productos">
-                    <p>${TipoProd[i]} ${Productos[i]}</p>
-                    <img src="${Imgs[i]}" alt="img">
-                    <p>Seleccione pago</p>
-                    <select name="" id="formas-de-pago">
-                        <option value="Efectivo">Efectivo</option>
-                        <option value="Debito">Debito</option>
-                        <option value="Credito">Credito</option>
-                    </select>
-                    <p>Seleccione cantidades</p>
-                    <select name="" id="cantidades">
-                        ${opcSelectColores}
-                    </select>
-                </div>
+            <div class="productos div-colores" style="background-color: ${colorFundo};">
+                <p>${TipoProd[i]} ${Productos[i]}</p>
+                <img src="${Imgs[i]}" alt="img">
+                <p>Seleccione pago</p>
+                <select name="" id="formas-de-pago">
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Debito">Debito</option>
+                    <option value="Credito">Credito</option>
+                </select>
+                <p>Seleccione cantidades</p>
+                <select name="" id="cantidades">
+                    ${opcSelectColores}
+                </select>
             </div>
         `;
     }
