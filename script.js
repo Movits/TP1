@@ -84,6 +84,12 @@ function prod() {
         }
 
     for (let i = 0; i < ProductosMostrar; i++) {
+        let colorFundo;
+        if (i % 2 == 0) {
+            colorFundo = color1;
+        } else {
+            colorFundo = color2;
+        }
         let opcSelectColores = ``;
         for (let i = 0; i < opciones.length; i++) {
             if (opciones[i] <= cantPermitida.value) {
