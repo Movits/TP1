@@ -42,7 +42,6 @@ const TipoProd = [
     "Jugo de "
 ];
 
-
 function generar() {
     divContenedorProdYInfo.innerHTML = `
         <div id="contenedor-info">
@@ -98,5 +97,27 @@ function prod() {
                 </div>
             </div>
         `;
+    }
+}
+
+function colores() {
+    let color1 = "";
+    let color2 = "";
+
+    switch (prodColores.value) {
+        case "Rojo-Amarillo":
+            color1 = "red";
+            color2 = "yellow";
+            break;
+        case "Verde-Violeta":
+            color1 = "green";
+            color2 = "purple";
+            break;
+        case "Azul-Gris":
+            color1 = "blue";
+            color2 = "grey";
+            break;
+        default:
+            break;
     }
 }
