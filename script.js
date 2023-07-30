@@ -72,6 +72,10 @@ function prod() {
     const divContenedorProd = document.querySelector("#contenedor-productos");
     const opciones = [1,15,25,50];
 
+    let colores = colores();
+    let color1 = colores[0];
+    let color2 = colores[1];
+
     for (let i = 0; i < ProductosMostrar; i++) {
         if (i % 2 == 0) {
             colores(color1);
