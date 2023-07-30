@@ -9,6 +9,27 @@ body{
     padding-bottom: 2vh;
 }
 
+.selc-prod {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.selc-prod p {
+    margin: 0;
+    margin-right: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: large;
+    background-color: rgb(186, 222, 255);
+    border: none;
+}
+
 #contenedor-info{
     place-items: left;
     place-content: center;
