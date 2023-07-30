@@ -1,7 +1,7 @@
 const cantProdMostrar = document.querySelector("#cant-prod-mostrar");
 const cantPermitida = document.querySelector("#cant-perm");
-const prodColores = document.querySelector("#colores-prod");
 const divContenedorProdYInfo = document.querySelector("#contenedor-productos-y-info");
+const prodColores = document.querySelector("#colores-prod");
 
 const IMG_1 = "https://static.vecteezy.com/system/resources/previews/009/900/525/original/pizza-slice-isolated-illustration-colored-sketch-drawn-illustration-of-a-hot-slice-of-pepperoni-pizza-with-melting-cheese-food-cafe-pizzeria-logo-signboard-banner-menu-design-element-vector.jpg";
 const IMG_2 = "https://img.freepik.com/vector-gratis/flying-slice-of-pizza-cartoon-vector-illustration-concepto-comida-rapida-vector-aislado-estilo-dibujos-animados-plana_138676-1934.jpg?w=740&t=st=1690578504~exp=1690579104~hmac=7a89704ec401c90112798f1f42a5a72f48998f7da546c1ccf580a1f5a7d964ed";
@@ -55,6 +55,7 @@ function generar() {
 
     info();
     prod();
+    colores();
 }
 
 function info(){
@@ -68,10 +69,12 @@ function info(){
 }
 
 function colores() {
+    const selectColor = prodColores.value;
+
     let color1 = "";
     let color2 = "";
 
-    switch (prodColores.value) {
+    switch (selectColor) {
         case "Rojo-Amarillo":
             color1 = "red";
             color2 = "yellow";
@@ -115,7 +118,7 @@ function prod() {
             
         }
         divContenedorProd.innerHTML += `
-            <div class="div-colores" style="background-color: ${colorFundo}>
+            <div class="div-colores">
                 <div class="productos">
                     <p>${TipoProd[i]} ${Productos[i]}</p>
                     <img src="${Imgs[i]}" alt="img">
