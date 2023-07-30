@@ -71,6 +71,14 @@ function prod() {
     const ProductosMostrar = cantProdMostrar.value;
     const divContenedorProd = document.querySelector("#contenedor-productos");
     const opciones = [1,15,25,50];
+
+    for (let i = 0; i < ProductosMostrar; i++) {
+        if (i % 2 == 0) {
+            colores(color1);
+        } else {
+            colores(color2);
+        }
+
     for (let i = 0; i < ProductosMostrar; i++) {
         let opcSelectColores = ``;
         for (let i = 0; i < opciones.length; i++) {
@@ -80,7 +88,7 @@ function prod() {
             
         }
         divContenedorProd.innerHTML += `
-            <div class="div-colores">
+            <div class="div-colores" style="background-color: ${colores()}>
                 <div class="productos">
                     <p>${TipoProd[i]} ${Productos[i]}</p>
                     <img src="${Imgs[i]}" alt="img">
@@ -98,6 +106,7 @@ function prod() {
             </div>
         `;
     }
+}
 }
 
 function colores() {
@@ -120,4 +129,6 @@ function colores() {
         default:
             break;
     }
+    
+    return [color1, color2];
 }
