@@ -67,58 +67,6 @@ function info(){
     `;
 }
 
-function prod() {
-    const ProductosMostrar = cantProdMostrar.value;
-    const divContenedorProd = document.querySelector("#contenedor-productos");
-    const opciones = [1,15,25,50];
-
-    let colores = colores();
-    let color1 = colores[0];
-    let color2 = colores[1];
-
-    for (let i = 0; i < ProductosMostrar; i++) {
-        if (i % 2 == 0) {
-            colores(color1);
-        } else {
-            colores(color2);
-        }
-
-    for (let i = 0; i < ProductosMostrar; i++) {
-        let colorFundo;
-        if (i % 2 == 0) {
-            colorFundo = color1;
-        } else {
-            colorFundo = color2;
-        }
-        let opcSelectColores = ``;
-        for (let i = 0; i < opciones.length; i++) {
-            if (opciones[i] <= cantPermitida.value) {
-                opcSelectColores += `<option value="${opciones[i]}">${opciones[i]}</option>`;
-            }
-            
-        }
-        divContenedorProd.innerHTML += `
-            <div class="div-colores" style="background-color: ${colores()}>
-                <div class="productos">
-                    <p>${TipoProd[i]} ${Productos[i]}</p>
-                    <img src="${Imgs[i]}" alt="img">
-                    <p>Seleccione pago</p>
-                    <select name="" id="formas-de-pago">
-                        <option value="Efectivo">Efectivo</option>
-                        <option value="Debito">Debito</option>
-                        <option value="Credito">Credito</option>
-                    </select>
-                    <p>Seleccione cantidades</p>
-                    <select name="" id="cantidades">
-                        ${opcSelectColores}
-                    </select>
-                </div>
-            </div>
-        `;
-    }
-}
-}
-
 function colores() {
     let color1 = "";
     let color2 = "";
@@ -142,3 +90,48 @@ function colores() {
     
     return [color1, color2];
 }
+
+function prod() {
+    const ProductosMostrar = cantProdMostrar.value;
+    const divContenedorProd = document.querySelector("#contenedor-productos");
+    const opciones = [1,15,25,50];
+
+    let coloresSelec = colores();
+    let color1 = coloresSelec[0];
+    let color2 = coloresSelec[1];
+
+    for (let i = 0; i < ProductosMostrar; i++) {
+        let colorFundo;
+        if (i % 2 == 0) {
+            colorFundo = color1;
+        } else {
+            colorFundo = color2;
+        }
+        let opcSelectColores = ``;
+        for (let i = 0; i < opciones.length; i++) {
+            if (opciones[i] <= cantPermitida.value) {
+                opcSelectColores += `<option value="${opciones[i]}">${opciones[i]}</option>`;
+            }
+            
+        }
+        divContenedorProd.innerHTML += `
+            <div class="div-colores" style="background-color: ${colorFundo}>
+                <div class="productos">
+                    <p>${TipoProd[i]} ${Productos[i]}</p>
+                    <img src="${Imgs[i]}" alt="img">
+                    <p>Seleccione pago</p>
+                    <select name="" id="formas-de-pago">
+                        <option value="Efectivo">Efectivo</option>
+                        <option value="Debito">Debito</option>
+                        <option value="Credito">Credito</option>
+                    </select>
+                    <p>Seleccione cantidades</p>
+                    <select name="" id="cantidades">
+                        ${opcSelectColores}
+                    </select>
+                </div>
+            </div>
+        `;
+    }
+}
+
